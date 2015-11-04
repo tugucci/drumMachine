@@ -1,0 +1,532 @@
+<LinearLayout
+
+    android:orientation="vertical"
+    android:background="#ffc8ff91"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#ffffb93f"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="0.5">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="#ff88f6ff"
+            android:layout_marginTop="6dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="bottom">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:id="@+id/textView2"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="@string/bpm"
+                    android:typeface="sans"
+                    android:textStyle="italic"
+                    android:textColor="#ff774cff" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:id="@+id/bpmNumber"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:layout_weight="1"
+                    android:typeface="sans"
+                    android:textStyle="italic"
+                    android:textColor="#ff774cff" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:text="@string/minus"
+                    android:id="@+id/subtractBpm"
+                    android:layout_weight="1"
+                    android:textSize="30dp"
+                    android:typeface="sans"
+                    android:textStyle="italic"
+                    android:textColor="#ffff70ea"
+                    android:soundEffectsEnabled="false"
+                    />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:text="@string/plus"
+                    android:id="@+id/addBpm"
+                    android:layout_weight="1"
+                    android:textSize="30dp"
+                    android:typeface="sans"
+                    android:textStyle="italic"
+                    android:textColor="#ffff70ea"
+                    android:soundEffectsEnabled="false"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="#ffabff54"
+            android:layout_marginTop="6dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:id="@+id/kick"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:typeface="sans"
+                    android:textStyle="italic"
+                    android:textColor="#ffff70ea"
+                    android:onClick="kickGo"
+                    android:textOff="@string/kick"
+                    android:textOn="@string/kick"
+                    android:tag="1"
+                    android:soundEffectsEnabled="false"
+
+                    android:checked="true" />
+
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:id="@+id/hh"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:typeface="sans"
+                    android:textStyle="italic"
+                    android:textColor="#ffff70ea"
+                    android:onClick="hhGo"
+                    android:textOff="@string/hhclosed"
+                    android:textOn="@string/hhclosed"
+                    android:tag="2"
+                    android:soundEffectsEnabled="false"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:id="@+id/snare"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:typeface="sans"
+                    android:textStyle="italic"
+                    android:textColor="#ffff70ea"
+                    android:onClick="snareGo"
+                    android:textOn="@string/snare"
+                    android:textOff="@string/snare"
+                    android:layout_gravity="center_horizontal"
+                    android:tag="3"
+                    android:soundEffectsEnabled="false"
+
+                    />
+
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:id="@+id/perc"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:typeface="sans"
+                    android:textStyle="italic"
+                    android:textColor="#ffff70ea"
+                    android:onClick="percGo"
+                    android:textOff="@string/percussion"
+                    android:textOn="@string/percussion"
+                    android:layout_gravity="center_horizontal"
+                    android:tag="4"
+                    android:soundEffectsEnabled="false"
+
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="#ffffccf5"
+            android:layout_marginTop="6dp">
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:id="@+id/stop"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:text="@string/stop"
+                android:textSize="20dp"
+                android:src="@drawable/broccoli4copy"
+                android:onClick="stopSeq"
+                android:soundEffectsEnabled="false"
+                />
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:id="@+id/play"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:text="@string/play"
+                android:textSize="20dp"
+                android:src="@drawable/banana"
+                android:onClick="playSeq"
+                android:soundEffectsEnabled="false"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:background="#ffffbfdf"
+        android:weightSum="1"
+        android:layout_weight="0.5"
+        android:layout_margin="0dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:background="#ff60bc63"
+            android:layout_weight="0.5"
+            android:layout_gravity="center">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ToggleButton
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/step1"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="24dp"
+                        android:textOn=" "
+                        android:textOff = " "
+                        style="@style/TextAppearance.AppCompat.Button"
+                        android:buttonTint="#ffff09bd"
+                        android:tag="0"
+                        android:soundEffectsEnabled="false"
+                        />
+
+                    <ToggleButton
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/step2"
+                        android:layout_gravity="center_vertical"
+                        android:textOn=" "
+                        android:textOff = " "
+                        android:layout_marginLeft="24dp"
+                        style="@style/TextAppearance.AppCompat.Button"
+                        android:buttonTint="#ffff09bd"
+                        android:tag="1"
+                        android:soundEffectsEnabled="false"
+
+                        />
+
+                    <ToggleButton
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/step3"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="24dp"
+                        android:textOn=" "
+                        android:textOff = " "
+                        style="@style/TextAppearance.AppCompat.Button"
+                        android:buttonTint="#ffff09bd"
+                        android:tag="2"
+                        android:soundEffectsEnabled="false"
+
+                        />
+
+                    <ToggleButton
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/step4"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="24dp"
+                        android:textOn=" "
+                        android:textOff = " "
+                        style="@style/TextAppearance.AppCompat.Button"
+                        android:buttonTint="#ffff09bd"
+                        android:tag="3"
+                        android:soundEffectsEnabled="false"
+
+                        />
+
+                    <ToggleButton
+
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/step5"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="24dp"
+                        android:textOn=" "
+                        android:textOff = " "
+                        style="@style/TextAppearance.AppCompat.Button"
+                        android:buttonTint="#ffff09bd"
+                        android:tag="4"
+                        android:soundEffectsEnabled="false"
+
+                        />
+
+                    <ToggleButton
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/step6"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="24dp"
+                        android:textOn=" "
+                        android:textOff = " "
+                        style="@style/TextAppearance.AppCompat.Button"
+                        android:buttonTint="#ffff09bd"
+                        android:tag="5"
+                        android:soundEffectsEnabled="false"
+
+                        />
+
+                    <ToggleButton
+
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/step7"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="24dp"
+                        android:textOn=" "
+                        android:textOff = " "
+                        style="@style/TextAppearance.AppCompat.Button"
+                        android:buttonTint="#ffff09bd"
+                        android:tag="6"
+                        android:soundEffectsEnabled="false"
+
+                        />
+
+                    <ToggleButton
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/step8"
+                        android:textOn=" "
+                        android:textOff = " "
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="20dp"
+                        android:buttonTint="#ffff09bd"
+                        android:tag="7"
+                        android:soundEffectsEnabled="false"
+
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:background="#ff76e147"
+            android:layout_weight="0.5"
+            android:layout_gravity="center">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ToggleButton
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/step9"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="24dp"
+                        android:textOn=" "
+                        android:textOff = " "
+                        style="@style/TextAppearance.AppCompat.Button"
+                        android:buttonTint="#ffff09bd"
+                        android:tag="8"
+                        android:soundEffectsEnabled="false"
+
+                        />
+
+                    <ToggleButton
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/step10"
+                        android:layout_gravity="center_vertical"
+                        android:textOn=" "
+                        android:textOff = " "
+                        android:layout_marginLeft="24dp"
+                        style="@style/TextAppearance.AppCompat.Button"
+                        android:buttonTint="#ffff09bd"
+                        android:tag="9"
+                        android:soundEffectsEnabled="false"
+
+                        />
+
+                    <ToggleButton
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/step11"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="24dp"
+                        android:textOn=" "
+                        android:textOff = " "
+                        style="@style/TextAppearance.AppCompat.Button"
+                        android:buttonTint="#ffff09bd"
+                        android:tag="10"
+                        android:soundEffectsEnabled="false"
+
+                        />
+
+                    <ToggleButton
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/step12"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="24dp"
+                        android:textOn=" "
+                        android:textOff = " "
+                        style="@style/TextAppearance.AppCompat.Button"
+                        android:buttonTint="#ffff09bd"
+                        android:tag="11"
+                        android:soundEffectsEnabled="false"
+
+                        />
+
+                    <ToggleButton
+
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/step13"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="24dp"
+                        android:textOn=" "
+                        android:textOff = " "
+                        style="@style/TextAppearance.AppCompat.Button"
+                        android:buttonTint="#ffff09bd"
+                        android:tag="12"
+                        android:soundEffectsEnabled="false"
+
+                        />
+
+                    <ToggleButton
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/step14"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="24dp"
+                        android:textOn=" "
+                        android:textOff = " "
+                        style="@style/TextAppearance.AppCompat.Button"
+                        android:buttonTint="#ffff09bd"
+                        android:tag="13"
+                        android:soundEffectsEnabled="false"
+
+                        />
+
+                    <ToggleButton
+
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/step15"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="24dp"
+                        android:textOn=" "
+                        android:textOff = " "
+                        style="@style/TextAppearance.AppCompat.Button"
+                        android:buttonTint="#ffff09bd"
+                        android:tag="14"
+                        android:soundEffectsEnabled="false"
+
+                        />
+
+                    <ToggleButton
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/step16"
+                        android:textOn=" "
+                        android:textOff = " "
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="20dp"
+                        android:buttonTint="#ffff09bd"
+                        android:tag="15"
+                        android:soundEffectsEnabled="false"
+
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
